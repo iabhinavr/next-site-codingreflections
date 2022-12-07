@@ -1,26 +1,53 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer utilities {
+  .post-content h2 {
+    @apply text-xl font-bold py-2 pl-4 border-l-brand-pink border-l-4 mb-4;
   }
-  body {
-    color: white;
-    background: black;
+  .post-content h3 {
+    @apply text-xl mb-4;
   }
+  .post-content pre {
+    @apply mb-4;
+  }
+  .post-content p {
+    @apply pb-4;
+  }
+  .post-content ul {
+    @apply pb-4 list-disc list-inside text-brand-yellow;
+  }
+  .post-content .vid-wrapper-16-by-9 {
+    @apply aspect-video bg-contain relative mb-4;
+  }
+  .post-content .vid-overlay-wrapper {
+    @apply inset-0 bg-slate-900/50 absolute flex justify-center items-center ring ring-slate-600;
+  }
+  .post-content .vid-play-btn {
+    @apply h-20 w-20 cursor-pointer bg-[url('../public/images/play-circle.svg')] bg-contain bg-no-repeat transition-all hover:h-24 hover:w-24;
+  }
+  .post-content .vid-overlay-bottom {
+    @apply absolute right-0 bottom-0 left-0 flex justify-between items-center;
+  }
+  .post-content .vid-overlay-notify {
+    @apply text-[12px] pl-4;
+  }
+  .post-content .vid-overlay-ext {
+    @apply pt-3 pb-2 px-3 bg-red-600 block hover:bg-red-500 transition-all;
+  }
+  .post-content iframe {
+    @apply w-full h-full;
+  }
+}
+
+:root {
+  --blue-1: #4cc9f0;
+  --blue-2: #4361ee;
+  --pink-1: #fd6dcf;
+  --violet-1: #b267f8;
+  --yellow-1: #f9cc16;
+  --black-1: #202429;
+  --white-1: #fafafa;
+  --white-2: #cfcfcf;
 }
