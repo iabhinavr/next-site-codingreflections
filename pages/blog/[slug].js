@@ -1,5 +1,5 @@
 import Layout from "../../components/layout";
-import { getAllPostSlugs, getSinglePostData } from "../../lib/wp";
+import { getAllPostSlugs, getSinglePostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
 import PostContent from "../../components/PostContent";

@@ -12,11 +12,17 @@
   .post-content pre {
     @apply mb-4;
   }
+  .post-content a {
+    @apply underline text-brand-skyblue;
+  }
   .post-content p {
-    @apply pb-4;
+    @apply pb-4 tracking-tight text-lg;
   }
   .post-content ul {
     @apply pb-4 list-disc list-inside text-brand-yellow;
+  }
+  .post-content ol {
+    @apply pb-4 list-decimal list-inside text-brand-skyblue;
   }
   .post-content .vid-wrapper-16-by-9 {
     @apply aspect-video bg-contain relative mb-4;
@@ -24,7 +30,8 @@
   .post-content .vid-overlay-wrapper {
     @apply inset-0 bg-slate-900/50 absolute flex justify-center items-center ring ring-slate-600;
   }
-  .post-content .vid-play-btn {
+  .post-content .vid-play-btn,
+  .yt-video .vid-play-btn {
     @apply h-20 w-20 cursor-pointer bg-[url('../public/images/play-circle.svg')] bg-contain bg-no-repeat transition-all hover:h-24 hover:w-24;
   }
   .post-content .vid-overlay-bottom {
@@ -39,6 +46,34 @@
   .post-content iframe {
     @apply w-full h-full;
   }
+}
+
+@keyframes blink {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 100%;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+.te-container {
+  display: block;
+  position: relative;
+}
+
+.typingeffect {
+  opacity: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.cursor-blinking {
+  position:fixed;
+  animation: blink 1s infinite;
+  font-family: "Libre Baskerville", serif;
 }
 
 :root {

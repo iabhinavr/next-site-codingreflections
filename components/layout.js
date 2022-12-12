@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import SiteHeader from "./SiteHeader";
+import SiteFooter from "./SiteFooter";
 
 const name = "Your Name";
 export const siteTitle = "Coding Reflections";
@@ -20,6 +21,7 @@ export default function Layout(props) {
                 <main className="">
                     {props.children}
                 </main>
+                <SiteFooter />
             </div>
         </>
     );
