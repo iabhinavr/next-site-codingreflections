@@ -1,6 +1,20 @@
+import Link from "next/link";
+import { useState } from "react";
+
 export default function Footer() {
+
+    const [pages, setPages] = useState([
+        {slug: "about", title: "About"},
+        {slug: "terms-conditions", title: "Terms of Use"},
+        {slug: "privacy-policy", title: "Privacy Policy"},
+        {slug: "disclosure", title: "Disclosure"},
+        {slug: "disclaimer", title: "Disclaimer"}
+    ]);
+
+    console.log(pages);
+
     return (
-        <footer id="site-footer" className="flex flex-col items-center bg-slate-600">
+        <footer id="site-footer" className="flex flex-col items-center bg-slate-800">
             <ul className="[&>li>a>svg]:fill-slate-200 [&>li>a>svg]:w-full [&>li>a]:w-6 flex h-full [&>li>a]:flex [&>li>a]:h-full [&>li>a]:mx-2 [&>li>a]:items-center [&>li>a:hover]:-translate-y-0.5 [&>li>a:hover]:text-brand-pink [&>li>a>svg]:transition [&>li>a:hover>svg]:fill-brand-ultramarine py-4">
                 <li>
                     <a href="https://www.youtube.com/channel/UCCvxEsK8L4e_JAVXionkyqw">
@@ -19,8 +33,18 @@ export default function Footer() {
                         </a>
                 </li>
             </ul>
-            <div className="pb-4">
+            <div className="py-4 px-4 flex justify-between w-full bg-slate-700">
                 <p>&copy; 2020-2023 Abhinav R</p>
+                <ul className="flex h-full [&>li>a]:flex [&>li>a]:h-full [&>li>a]:px-2 [&>li>a]:items-center [&>li>a:hover]:text-brand-pink [&>li>a]:transition text-sm tracking-tighter">
+                    {
+                        pages.map((page) => (
+                            <li>
+                                <Link href={`/${page.slug}`}>{page.title}</Link>
+                            </li>
+                            
+                        ))
+                    }
+                </ul>
             </div>
         </footer>
     );
