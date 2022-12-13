@@ -7,10 +7,12 @@ import php from 'highlight.js/lib/languages/php';
 import xml from 'highlight.js/lib/languages/xml';
 import javascript from 'highlight.js/lib/languages/javascript';
 import css from 'highlight.js/lib/languages/css';
+import bash from 'highlight.js/lib/languages/bash';
 hljs.registerLanguage('php', php);
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
+hljs.registerLanguage('bash', bash);
 
 export default function PostContent(props) {
 
