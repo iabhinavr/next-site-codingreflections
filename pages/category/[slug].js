@@ -38,7 +38,7 @@ export default function CategoryArchive({ allWpPosts, categoryDetails }) {
         <title>Blog</title>
       </Head>
       <section className="mt-4 container mx-auto px-2 font-mono lg:max-w-6xl">
-        <p className="text-xl py-3 italic font-bold">Found {categoryDetails.count} posts under the category <span className="text-brand-yellow"> '{categoryDetails.name}' </span></p>
+        <p className="text-xl py-3 italic font-bold">Found {categoryDetails.count} posts under the category <span className="text-brand-yellow"> {`'${categoryDetails.name}'`} </span></p>
         <ul className="post-list grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
           {posts.nodes.map(( post ) => (
             <li key={post.id} className="bg-slate-800 rounded-xl transform transition ring ring-slate-800 hover:ring-slate-600">

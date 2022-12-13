@@ -38,7 +38,7 @@ export default function Footer() {
                 <ul className="flex flex-col items-center md:flex-row h-full [&>li>a]:flex [&>li>a]:h-full [&>li>a]:px-2 [&>li>a]:items-center [&>li>a:hover]:text-brand-pink [&>li>a]:transition text-sm tracking-tighter">
                     {
                         pages.map((page) => (
-                            <li>
+                            <li key={page.slug}>
                                 <Link href={`/${page.slug}`}>{page.title}</Link>
                             </li>
                             
