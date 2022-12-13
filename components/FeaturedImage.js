@@ -27,7 +27,7 @@ export default function FeaturedImage(props) {
   
     return (
       <Link href={`/blog/${props.post.slug}`}>
-        <Image className="rounded-t-xl" width={img.width} height={img.height} src={img.src} alt={props.post.title} />
+        <Image className="rounded-l-xl" width={img.width} height={img.height} src={img.src} alt={props.post.title} />
       </Link>
     );
 }

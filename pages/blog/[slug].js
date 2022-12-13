@@ -13,7 +13,7 @@ export default function Post({ postData }) {
             </Head>
             <article className="single-post-article">
                 <div className="h-[50vh] min-h-[15rem] mb-4 bg-slate-700">
-                    <div className="h-full container mx-auto flex justify-center flex-col lg:max-w-3xl">
+                    <div className="h-full container px-2 mx-auto flex justify-center flex-col lg:max-w-3xl">
                         <h1 className="text-2xl font-bold py-4 text-brand-pink">{postData.title}</h1>
                         <div>
                             <small>
@@ -25,7 +25,7 @@ export default function Post({ postData }) {
                     </div>
                 </div>
                 
-                <div className="post-content container mx-auto lg:max-w-3xl">
+                <div className="post-content container mx-auto lg:max-w-3xl px-2">
                     <PostContent content={postData.content} />
                 </div>
                 

@@ -37,6 +37,9 @@
   .post-content .vid-overlay-bottom {
     @apply absolute right-0 bottom-0 left-0 flex justify-between items-center;
   }
+  .post-content .vid-overlay-bottom a {
+    @apply text-slate-100 no-underline;
+  }
   .post-content .vid-overlay-notify {
     @apply text-[12px] pl-4;
   }

@@ -33,9 +33,9 @@ export default function Footer() {
                         </a>
                 </li>
             </ul>
-            <div className="py-4 px-4 flex justify-between w-full bg-slate-700">
+            <div className="py-4 px-4 flex flex-col items-center md:flex-row justify-between w-full bg-slate-700">
                 <p>&copy; 2020-2023 Abhinav R</p>
-                <ul className="flex h-full [&>li>a]:flex [&>li>a]:h-full [&>li>a]:px-2 [&>li>a]:items-center [&>li>a:hover]:text-brand-pink [&>li>a]:transition text-sm tracking-tighter">
+                <ul className="flex flex-col items-center md:flex-row h-full [&>li>a]:flex [&>li>a]:h-full [&>li>a]:px-2 [&>li>a]:items-center [&>li>a:hover]:text-brand-pink [&>li>a]:transition text-sm tracking-tighter">
                     {
                         pages.map((page) => (
                             <li>

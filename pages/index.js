@@ -13,10 +13,10 @@ export default function Home() {
                 <title>Coding Reflections</title>
             </Head>
             <section>
-                <div className="h-[90vh] min-h-[15rem] relative bg-[url(https://wp.codingreflections.com/wp-content/uploads/2022/09/code-2.jpg)] bg-cover">
+                <div className="h-[50vh] md:h-[90vh] min-h-[15rem] relative bg-[url(https://wp.codingreflections.com/wp-content/uploads/2022/09/code-2.jpg)] bg-cover px-2">
                     <div className="container mx-auto lg:max-w-4xl flex flex-col justify-center items-start h-full">
                         <div className="absolute inset-0 bg-slate-900 opacity-80 z-10"></div>
-                        <div className="text-5xl font-bold z-20 pb-6">
+                        <div className="text-2xl md:text-5xl font-bold z-20 pb-6">
                             <Typewriter onInit={(typewriter) => {
                                 typewriter
                                 .typeString("I'm Abhinav")
@@ -33,11 +33,11 @@ export default function Home() {
                                 autoStart: true
                             }} />
                         </div>
-                        <div className="text-2xl z-20 pb-6">
+                        <div className="text-xl md:text-2xl z-20 pb-6">
                             <p className="text-slate-100">A space to reflect what I learn about web development - PHP, Javascript, WordPress, and more...</p>
                         </div>
                         <div className="flex flex-row z-20 justify-between items-center w-full">
-                            <Link className="block text-xl py-2 px-4 border-2 border-brand-pink hover:bg-brand-pink transition" href="/blog">Read Blog ⟶</Link>
+                            <Link className="block font-bold md:text-xl py-2 px-4 border-2 border-brand-pink hover:bg-brand-pink transition" href="/blog">Read Blog ⟶</Link>
                             <ul className="[&>li>a>svg]:fill-slate-200 [&>li>a>svg]:w-full [&>li>a]:w-6 flex h-full [&>li>a]:flex [&>li>a]:h-full [&>li>a]:mx-2 [&>li>a]:items-center [&>li>a:hover]:-translate-y-0.5 [&>li>a:hover]:text-brand-pink [&>li>a>svg]:transition [&>li>a:hover>svg]:fill-brand-ultramarine">
                                 <li>
                                     <a href="https://www.youtube.com/channel/UCCvxEsK8L4e_JAVXionkyqw">
