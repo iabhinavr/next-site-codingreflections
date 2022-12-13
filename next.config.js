@@ -32,7 +32,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/parse-xml-php/',
+        source: '/parse-xml-php',
         destination: '/blog/parse-xml-php',
         permanent: true
       },
