@@ -15,12 +15,6 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
-      {
-        protocol: 'http',
-        hostname: 'wordpress.local',
-        port: '',
-        pathname: '/**',
-      },
     ],
   },
 }
