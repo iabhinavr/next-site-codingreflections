@@ -29,6 +29,105 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/parse-xml-php/',
+        destination: '/blog/parse-xml-php',
+        permanent: true
+      },
+      {
+        source: '/php-data-types/',
+        destination: '/blog/php-data-types',
+        permanent: true
+      },
+      {
+        source: '/php-superglobals/',
+        destination: '/blog/php-superglobals',
+        permanent: true
+      },
+      {
+        source: '/php-variables-constants/',
+        destination: '/blog/php-variables-constants',
+        permanent: true
+      },
+      {
+        source: '/php-basic-syntax/',
+        destination: '/blog/php-basic-syntax',
+        permanent: true
+      },
+      {
+        source: '/what-are-websockets/',
+        destination: '/blog/what-are-websockets',
+        permanent: true
+      },
+      {
+        source: '/php-redirects/',
+        destination: '/blog/php-redirects',
+        permanent: true
+      },
+      {
+        source: '/php-form-handling/',
+        destination: '/blog/php-form-handling',
+        permanent: true
+      },
+      {
+        source: '/php-development-environment-docker/',
+        destination: '/blog/php-development-environment-docker',
+        permanent: true
+      },
+      {
+        source: '/nginx-reverse-proxy-nodejs/',
+        destination: '/blog/nginx-reverse-proxy-nodejs',
+        permanent: true
+      },
+      {
+        source: '/hugo-table-of-contents/',
+        destination: '/blog/hugo-table-of-contents',
+        permanent: true
+      },
+      {
+        source: '/what-is-markdown/',
+        destination: '/blog/what-is-markdown',
+        permanent: true
+      },
+      {
+        source: '/js-functions/',
+        destination: '/blog/js-functions',
+        permanent: true
+      },
+      {
+        source: '/browsersync-reload-localhost/',
+        destination: '/blog/browsersync-reload-localhost',
+        permanent: true
+      },
+      {
+        source: '/wordpress-programming-languages/',
+        destination: '/blog/wordpress-programming-languages',
+        permanent: true
+      },
+      {
+        source: '/should-i-learn-jquery/',
+        destination: '/blog/should-i-learn-jquery',
+        permanent: true
+      },
+      {
+        source: '/how-to-create-svg-image-blur-mouseover-effect/',
+        destination: '/blog/how-to-create-svg-image-blur-mouseover-effect',
+        permanent: true
+      },
+      {
+        source: '/hide-header-on-scroll-down/',
+        destination: '/blog/hide-header-on-scroll-down',
+        permanent: true
+      },
+      {
+        source: '/php-parse-html/',
+        destination: '/blog/php-parse-html',
+        permanent: true
+      },
+    ]
+  }
 }
 
 module.exports = nextConfig
