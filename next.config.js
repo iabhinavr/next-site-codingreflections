@@ -15,6 +15,18 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'next.codingreflections.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'codingreflections.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 }
