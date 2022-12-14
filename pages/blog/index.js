@@ -25,7 +25,7 @@ export default function Blog({ allWpPosts }) {
       <Head>
         <title>Blog</title>
       </Head>
-      <section className="mt-4 container mx-auto px-2 font-mono lg:max-w-5xl">
+      <section className="mt-4 container mx-auto px-2 font-brand lg:max-w-5xl">
         <ul className="post-list">
           {posts.nodes.map(( post ) => (
             <li key={post.id} className="bg-slate-800 rounded-xl transform transition ring ring-slate-800 hover:ring-slate-600 grid sm:grid-cols-7 gap-4 mb-4">

@@ -9,7 +9,7 @@ export const siteTitle = "Coding Reflections";
 export default function Layout(props) {
     return (
         <>
-            <div className={props.pageType + " bg-slate-900 font-mono text-gray-100"}>
+            <div className={props.pageType + " bg-slate-900 text-gray-100 font-brand"}>
                 <Head>
                     <link rel="icon" href="/favicon.ico" />
                     <meta name="description" content="Coding Reflections Blog" />

@@ -19,6 +19,9 @@ module.exports = {
           gray: "#cfcfcf",
         },
       },
+      fontFamily: {
+        'brand': ['Roboto Mono, ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace']
+      },
     },
   },
   plugins: [],

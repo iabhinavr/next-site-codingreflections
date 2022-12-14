@@ -25,7 +25,7 @@ export default function Post({ postData }) {
                     </div>
                 </div>
                 
-                <div className="post-content container mx-auto lg:max-w-3xl px-2">
+                <div className="post-content container mx-auto lg:max-w-3xl px-2 tracking-tight">
                     <PostContent content={postData.content} />
                 </div>
                 
