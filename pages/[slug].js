@@ -37,14 +37,13 @@ export async function getStaticPaths() {
     const paths = await getAllPageSlugs();
     return {
         paths,
-        fallback: false
+        fallback: 'blocking'
     };
 }
 
 export async function getStaticProps({ params }) {
     // Fetch necessary data for the blog post using params.id
 
-    console.log('params slug...');
     console.log(params.slug);
     const pageData = await getPage(params.slug);
     return {

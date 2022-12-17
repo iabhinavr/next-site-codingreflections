@@ -10,6 +10,12 @@ const nextConfig = {
         pathname: '/wp-content/**',
       },
       {
+        protocol: 'http',
+        hostname: 'wordpress.local',
+        port: '',
+        pathname: '/wp-content/**',
+      },
+      {
         protocol: 'https',
         hostname: 'cdn-1.codingreflections.com',
         port: '',
