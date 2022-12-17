@@ -24,6 +24,18 @@
   .post-content ol {
     @apply pb-4 list-decimal list-inside text-brand-skyblue;
   }
+  .post-content figure {
+    @apply pb-4;
+  }
+  .post-content figure figcaption {
+    @apply text-center py-2;
+  }
+  .post-content p code,
+  .post-content li code,
+  .post-content h2 code,
+  .post-content h3 code {
+    @apply py-1 px-2 bg-slate-700 rounded;
+  }
   .post-content .vid-wrapper-16-by-9 {
     @apply aspect-video bg-contain relative mb-4;
   }
