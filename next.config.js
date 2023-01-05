@@ -132,6 +132,16 @@ const nextConfig = {
         destination: '/blog/php-parse-html',
         permanent: true
       },
+      {
+        source: '/go/linode',
+        destination: 'https://linode.gvw92c.net/mD2re',
+        permanent: true
+      },
+      {
+        source: '/go/digitalocean',
+        destination: 'https://m.do.co/c/4269e9a8d8a4',
+        permanent: true
+      },
     ]
   }
 }
