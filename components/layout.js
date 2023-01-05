@@ -18,7 +18,8 @@ export default function Layout(props) {
                     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
                     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
                     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
-                    <link rel="manifest" href="/images/site.webmanifest"></link>
+                    <link rel="manifest" href="/images/site.webmanifest" />
+                    <meta name='ir-site-verification-token' value='1292716316' />
                 </Head>
                 <SiteHeader />
                 <main className="">
