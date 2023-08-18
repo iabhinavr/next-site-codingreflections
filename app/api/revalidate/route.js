@@ -3,14 +3,14 @@ import { revalidatePath } from "next/cache";
 
 export async function GET (request) {
 
-    let slug = request.nextUrl.searchParams.get('slug');
+    // let slug = request.nextUrl.searchParams.get('slug');
     let path = '';
 
     if(request.nextUrl.searchParams.get('type') === 'post') {
-        path = '/blog/' + slug;
+        path = '/blog/[slug]';
     }
     else if(request.nextUrl.searchParams.get('type') === 'page') {
-        path = '/' + slug;
+        path = '/[slug]';
     }
     else if(request.nextUrl.searchParams.get('type') === 'home') {
         path = '/blog';
@@ -21,7 +21,7 @@ export async function GET (request) {
     }
 
     try {
-        await revalidatePath(path);
+        revalidatePath(path);
         return NextResponse.json({ revalidated: true, path: path, now: Date.now() });
     }
     catch (err) {

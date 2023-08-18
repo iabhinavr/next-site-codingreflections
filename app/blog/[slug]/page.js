@@ -1,9 +1,14 @@
 import { getAllPostSlugs, getSinglePostData } from "../../lib/posts";
 import Date from "../../components/date";
 import PostContent from "../../components/PostContent";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({params}) {
     const postData = await getSinglePostData(params.slug);
+
+    if(!(postData?.title) ) {
+        notFound();
+    }
     return {
         title: postData.title,
         description: postData.excerpt,
@@ -13,6 +18,10 @@ export async function generateMetadata({params}) {
 export default async function Post({ params }) {
 
     const postData = await getSinglePostData(params.slug);
+
+    if(!postData?.title) {
+        notFound();
+    }
 
     return (
 

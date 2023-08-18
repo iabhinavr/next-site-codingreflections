@@ -3,10 +3,17 @@ import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import Date from "../components/date";
 import PostContent from "../components/PostContent";
+import { notFound } from 'next/navigation';
 
-export const metadata = {
-    title: "My Page",
-    description: "Page description goes here",
+export async function generateMetadata({params}) {
+    const pageData = await getPage(params.slug);
+    if(pageData === undefined) {
+        notFound()
+    }
+    return {
+        title: pageData.title,
+        description: pageData.excerpt,
+    }
 }
 
 export async function generateStaticParams() {
@@ -18,7 +25,10 @@ export default async function MyPage ({ params }) {
 
     const pageData = await getPage(params.slug);
 
-    console.log(getPage);
+    if(pageData === undefined) {
+        notFound()
+    }
+
     return (
         <>
         <SiteHeader />
