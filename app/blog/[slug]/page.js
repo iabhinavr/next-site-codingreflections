@@ -1,16 +1,21 @@
-import Layout from "../../components/layout";
 import { getAllPostSlugs, getSinglePostData } from "../../lib/posts";
-import Head from "next/head";
 import Date from "../../components/date";
 import PostContent from "../../components/PostContent";
 
-export default function Post({ postData }) {
+export async function generateMetadata({params}) {
+    const postData = await getSinglePostData(params.slug);
+    return {
+        title: postData.title,
+        description: postData.excerpt,
+    }
+}
+
+export default async function Post({ params }) {
+
+    const postData = await getSinglePostData(params.slug);
+
     return (
-        <Layout pageType="singlePost">
-            <Head>
-                <title key="title">{postData.title}</title>
-                <meta name="description" content={postData.excerpt} />
-            </Head>
+
             <article className="single-post-article">
                 <div className="h-[50vh] min-h-[15rem] mb-4 bg-slate-700">
                     <div className="h-full container px-2 mx-auto flex justify-center flex-col lg:max-w-3xl">
@@ -30,37 +35,12 @@ export default function Post({ postData }) {
                 </div>
                 
             </article>
-                   
-        </Layout>
+
     );
 }
 
-export async function getStaticPaths() {
+export async function generateStaticParams() {
     // Return a list of possible values for slug
     const paths = await getAllPostSlugs();
-    return {
-        paths,
-        fallback: 'blocking'
-    };
-}
-
-export async function getStaticProps({ params }) {
-    // Fetch necessary data for the blog post using params.id
-
-    console.log('params slug...');
-    console.log(params.slug);
-    const postData = await getSinglePostData(params.slug);
-
-    if(!postData) {
-        return {
-            notFound: true
-        };
-    }
-
-    return {
-        props: {
-            postData,
-        },
-        notFound: false,
-    };
+    return paths;
 }

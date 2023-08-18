@@ -14,11 +14,11 @@ export async function getAllCategorySlugs() {
     const resJson = await graphqlRequest(query);
     const categories = resJson.data.categories.nodes;
 
+    console.log(categories);
+
     return categories.map((category) => {
        return {
-        params: {
             slug: category.slug
-        }
        }
     });
 }
@@ -59,7 +59,9 @@ export async function getCategoryPosts(slug) {
     };
 
     const resJson = await graphqlRequest(query);
+    console.log(resJson);
     const posts = resJson.data.posts;
+    console.log(posts);
     return posts;
 }
 
@@ -76,8 +78,10 @@ export async function getAllTagSlugs() {
     };
 
     const resJson = await graphqlRequest(query);
+    console.log(resJson);
     
     const tags = resJson.data.tags.nodes;
+    console.log(tags);
     return tags.map((tag) => {
         return {
                 slug: tag.slug
@@ -121,7 +125,9 @@ export async function getTagPosts(slug) {
     };
 
     const resJson = await graphqlRequest(query);
+    console.log(resJson);
     const posts = resJson.data.posts;
+console.log(posts);
     return posts;
 }
 

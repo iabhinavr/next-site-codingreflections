@@ -1,38 +1,20 @@
-import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
 import Link from "next/link";
 import Image from "next/image";
-import Typewriter from "typewriter-effect";
-import VideoCard from "../components/VideoCard";
+import VideoCard from "./components/VideoCard";
+import SiteHeader from "./components/SiteHeader";
+import SiteFooter from "./components/SiteFooter";
+import TypeWriterWrapper from "./components/TypeWriterWrapper";
 
 export default function Home() {
 
     return (
-        <Layout pageType="home">
-            <Head>
-                <title>Coding Reflections</title>
-            </Head>
+        <>
+            <SiteHeader />
             <section>
                 <div className="h-[50vh] md:h-[90vh] min-h-[15rem] relative bg-[url(https://wp.codingreflections.com/wp-content/uploads/2022/09/code-2.jpg)] bg-cover px-2">
                     <div className="container mx-auto lg:max-w-4xl flex flex-col justify-center items-start h-full">
                         <div className="absolute inset-0 bg-slate-900 opacity-80 z-10"></div>
-                        <div className="text-2xl md:text-5xl font-bold z-20 pb-6">
-                            <Typewriter onInit={(typewriter) => {
-                                typewriter
-                                .typeString("I'm Abhinav")
-                                .pauseFor(1000)
-                                .deleteAll()
-                                .typeString('let\'s <span class="text-brand-violet">learn coding,</span>')
-                                .pauseFor(1000)
-                                .deleteChars(13)
-                                .typeString('<span class="text-brand-yellow">build the web together.</span>')
-                                .pauseFor(2000)
-                                .start();
-                            }} options={{
-                                loop: true,
-                                autoStart: true
-                            }} />
-                        </div>
+                        <TypeWriterWrapper />
                         <div className="text-xl md:text-2xl z-20 pb-6">
                             <p className="text-slate-100">A space to reflect what I learn about web development - PHP, Javascript, WordPress, and more...</p>
                         </div>
@@ -73,18 +55,18 @@ export default function Home() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/blog/php-development-environment-docker">
+                            <Link href="/blog/nginx-reverse-proxy-nodejs">
                                 <Image className="rounded-t-xl" width="720" height="480" src="https://wp.codingreflections.com/wp-content/uploads/2022/06/node-js-nginx-yt-ft-1.png" alt="How to Setup Nginx Reverse Proxy for Node.js" />
                             </Link>
-                            <Link href="/blog/php-development-environment-docker">
+                            <Link href="/blog/nginx-reverse-proxy-nodejs">
                                 <h3>How to Setup Nginx Reverse Proxy for Node.js</h3>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/blog/php-development-environment-docker">
+                            <Link href="/blog/what-are-websockets">
                                 <Image className="rounded-t-xl" width="720" height="480" src="https://wp.codingreflections.com/wp-content/uploads/2022/09/what-is-websocket-yt-ft-1.png" alt="What is Websocket? How is it different from HTTP?" />
                             </Link>
-                            <Link href="/blog/php-development-environment-docker">
+                            <Link href="/blog/what-are-websockets">
                                 <h3>What is Websocket? How is it different from HTTP?</h3>
                             </Link>
                         </li>
@@ -95,7 +77,7 @@ export default function Home() {
                     
                 </div>
             </section>
-            <section id="home-featured-videos" class="px-2">
+            <section id="home-featured-videos" className="px-2">
                 <div className="container mx-auto lg:max-w-6xl">
                     <h2 className="text-2xl py-4">Popular Videos</h2>
                     <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -115,6 +97,7 @@ export default function Home() {
                     
                 </div>
             </section>
-        </Layout>
+            <SiteFooter />
+        </>
     );
 }

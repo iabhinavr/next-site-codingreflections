@@ -22,7 +22,7 @@ export default function Layout(props) {
                     <meta name='ir-site-verification-token' value='1292716316' />
                 </Head>
                 <SiteHeader />
-                <main className="">
+                <main className="site-main">
                     {props.children}
                 </main>
                 <SiteFooter />

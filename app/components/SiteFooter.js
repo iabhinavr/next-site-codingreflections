@@ -1,14 +1,17 @@
+'use client';
+
 import Link from "next/link";
+import { useState } from "react";
 
-export default function Footer() {
+export default function SiteFooter() {
 
-    const footerPages = [
+    const [pages, setPages] = useState([
         {slug: "about", title: "About"},
         {slug: "terms-conditions", title: "Terms of Use"},
         {slug: "privacy-policy", title: "Privacy Policy"},
         {slug: "disclosure", title: "Disclosure"},
         {slug: "disclaimer", title: "Disclaimer"}
-    ];
+    ]);
 
     console.log(pages);
 
@@ -36,7 +39,7 @@ export default function Footer() {
                 <p>&copy; 2020-2023 Abhinav R</p>
                 <ul className="flex flex-col items-center md:flex-row h-full [&>li>a]:flex [&>li>a]:h-full [&>li>a]:px-2 [&>li>a]:items-center [&>li>a:hover]:text-brand-pink [&>li>a]:transition text-sm tracking-tighter">
                     {
-                        footerPages.map((page) => (
+                        pages.map((page) => (
                             <li key={page.slug}>
                                 <Link href={`/${page.slug}`}>{page.title}</Link>
                             </li>

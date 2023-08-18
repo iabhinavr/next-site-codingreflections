@@ -13,10 +13,8 @@ export async function getAllPageSlugs() {
     let slugs = [];
 
     for (let ID in pages) {
-        slugs.push({
-            params: {
+        slugs.push({   
             slug: `${pages[ID]}`
-            }
         });
     }
 
@@ -40,7 +38,9 @@ export async function getPage(slug) {
     };
 
     const resJson = await graphqlRequest(query);
+    console.log(resJson);
     const page = resJson.data.pages.nodes[0];
+    console.log(page);
 
     return page;
 }
