@@ -21,6 +21,8 @@ export async function generateStaticParams() {
     return slugs;
 }
 
+export const revalidate = 86400;
+
 export default async function MyPage ({ params }) {
 
     const pageData = await getPage(params.slug);

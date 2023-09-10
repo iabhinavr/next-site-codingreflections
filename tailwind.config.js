@@ -2,9 +2,7 @@
 module.exports = {
   darkMode: 'class',
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./lib/**/*.{js,ts,jsx,tsx}"
+    "./app/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
@@ -23,7 +21,7 @@ module.exports = {
       fontFamily: {
         brand: ['Roboto Mono, ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace'],
         crimsonpro: ['var(--font-crimsonpro)'],
-        firacode: ['var(--font-firacode)'],
+        firacode: ['var(--font-firacode)']
       },
     },
   },

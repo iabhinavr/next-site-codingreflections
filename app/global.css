@@ -4,6 +4,9 @@
 
 @layer utilities {
 
+    p {
+        @apply: font-crimsonpro;
+    }
   .post-content h2 {
     @apply text-2xl font-firacode font-bold py-2 pl-4 border-l-brand-pink border-l-4 mb-4;
   }
@@ -23,10 +26,10 @@
     @apply text-base;
   }
   .post-content ul {
-    @apply pb-4 pl-4 list-disc font-firacode text-2xl text-gray-300;
+    @apply pb-4 pl-4 list-disc text-lg text-gray-300;
   }
   .post-content ol {
-    @apply pb-4 pl-4 list-decimal list-inside font-firacode text-lg text-gray-300;
+    @apply pb-4 pl-4 list-decimal list-inside text-lg text-gray-300;
   }
   .post-content li {
     @apply pb-4;

@@ -59,9 +59,7 @@ export async function getCategoryPosts(slug) {
     };
 
     const resJson = await graphqlRequest(query);
-    console.log(resJson);
     const posts = resJson.data.posts;
-    console.log(posts);
     return posts;
 }
 
@@ -125,9 +123,7 @@ export async function getTagPosts(slug) {
     };
 
     const resJson = await graphqlRequest(query);
-    console.log(resJson);
     const posts = resJson.data.posts;
-console.log(posts);
     return posts;
 }
 
@@ -150,9 +146,9 @@ export async function getCategoryDetails(slug) {
     return categoryDetails;
 }
 
-export async function getTagDetails(slug) {
+export async function getTagInfo(slug) {
     const query = {
-        query: `query getCategoryDetails {
+        query: `query getTagInfo {
                     tags(where: {slug: "${slug}"}) {
                         nodes {
                             name
@@ -166,5 +162,7 @@ export async function getTagDetails(slug) {
     const resJson = await graphqlRequest(query);
     const tagDetails = resJson.data.tags.nodes[0];
 
+    console.log('tagDetails:');
+    console.log(tagDetails);
     return tagDetails;
 }

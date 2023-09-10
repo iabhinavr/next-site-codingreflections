@@ -10,7 +10,7 @@ export default function PostList({initialPosts}) {
     const [posts, setPosts] = useState(initialPosts);
 
     return (
-        <section className="mt-4 container mx-auto px-2 font-firacode lg:max-w-5xl">
+        <section className="mt-4 container mx-auto px-2 lg:max-w-5xl">
             <ul className="post-list">
                 {posts.nodes.map((post) => (
                     <li key={post.id} className="bg-slate-800 rounded-xl transform transition ring ring-slate-800 hover:ring-slate-600 grid sm:grid-cols-7 gap-4 mb-4">
@@ -28,7 +28,7 @@ export default function PostList({initialPosts}) {
                             </h2>
 
 
-                            <p dangerouslySetInnerHTML={{ __html: post.excerpt }}></p>
+                            <div dangerouslySetInnerHTML={{ __html: post.excerpt }}></div>
                             <div className="flex justify-between">
                                 <div>
                                     {

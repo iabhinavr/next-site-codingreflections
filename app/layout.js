@@ -17,7 +17,7 @@ const fira_code = Fira_Code({
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={`${crimson_pro.variable} ${fira_code.variable}`}>
-            <body className="bg-slate-900 text-slate-100">{children}</body>
+            <body className="bg-slate-900 text-slate-100 font-firacode">{children}</body>
         </html>
     )
 }

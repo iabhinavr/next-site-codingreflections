@@ -15,6 +15,8 @@ export async function generateMetadata({params}) {
     }
 }
 
+export const revalidate = 86400;
+
 export default async function Post({ params }) {
 
     const postData = await getSinglePostData(params.slug);
