@@ -26,7 +26,7 @@ export async function getAllCategorySlugs() {
 export async function getCategoryPosts(slug) {
     const query = {
         query: `query getCategoryPosts {
-                    posts(where: {categoryName: "${slug}", orderby: {field: DATE, order: DESC}}, first: 6, after: "null") {
+                    posts(where: {categoryName: "${slug}", orderby: {field: DATE, order: DESC}}, first: 10, after: "null") {
                         pageInfo {
                             endCursor
                             hasNextPage
@@ -90,7 +90,7 @@ export async function getAllTagSlugs() {
 export async function getTagPosts(slug) {
     const query = {
         query: `query getTagPosts {
-                    posts(where: {tag: "${slug}", orderby: {field: DATE, order: DESC}}, first: 6, after: "null") {
+                    posts(where: {tag: "${slug}", orderby: {field: DATE, order: DESC}}, first: 10, after: "null") {
                         pageInfo {
                             endCursor
                             hasNextPage

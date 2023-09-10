@@ -30,7 +30,7 @@ export async function getAllPostSlugs() {
 export async function getAllWpPosts() {
   const query = {
     query: `query allWpPosts {
-        posts(where: {orderby: {field: DATE, order: DESC}}, first: 6, after: "null") {
+        posts(where: {orderby: {field: DATE, order: DESC}}, first: 10, after: "null") {
           pageInfo {
             endCursor
             hasNextPage
@@ -83,7 +83,7 @@ export async function getAllWpPosts() {
 
 export async function getMorePosts(endCursor, taxonomy) {
 
-  let condition = `where: {orderby: {field: DATE, order: DESC}}, first: 6, after: "${endCursor}"`;
+  let condition = `where: {orderby: {field: DATE, order: DESC}}, first: 10, after: "${endCursor}"`;
 
   if (taxonomy) {
     condition = `where: {orderby: {field: DATE, order: DESC}, ${taxonomy.key}: "${taxonomy.value}"}, first: 6, after: "${endCursor}"`;

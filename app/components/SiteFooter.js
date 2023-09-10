@@ -1,19 +1,14 @@
-'use client';
-
 import Link from "next/link";
-import { useState } from "react";
 
 export default function SiteFooter() {
 
-    const [pages, setPages] = useState([
+    const pages = [
         {slug: "about", title: "About"},
         {slug: "terms-conditions", title: "Terms of Use"},
         {slug: "privacy-policy", title: "Privacy Policy"},
         {slug: "disclosure", title: "Disclosure"},
         {slug: "disclaimer", title: "Disclaimer"}
-    ]);
-
-    console.log(pages);
+    ];
 
     return (
         <footer id="site-footer" className="flex flex-col items-center bg-slate-800">
