@@ -1,21 +1,22 @@
-// import Prism from "prismjs";
 'use client';
 import { useEffect } from "react";
 
 import hljs from "highlight.js/lib/core";
-import 'highlight.js/styles/atom-one-dark.css';
 import php from 'highlight.js/lib/languages/php';
 import xml from 'highlight.js/lib/languages/xml';
 import javascript from 'highlight.js/lib/languages/javascript';
 import css from 'highlight.js/lib/languages/css';
 import bash from 'highlight.js/lib/languages/bash';
 import shell from 'highlight.js/lib/languages/shell';
+
 hljs.registerLanguage('php', php);
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 hljs.registerLanguage('bash', bash);
 hljs.registerLanguage('shell', shell);
+
+import 'highlight.js/styles/github-dark.css'
 
 export default function PostContent(props) {
 

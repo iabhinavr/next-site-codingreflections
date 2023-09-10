@@ -25,17 +25,17 @@ export default async function Post({ params }) {
 
     return (
 
-            <article className="single-post-article">
+            <article className={`single-post-article`}>
                 <div className="h-[50vh] min-h-[15rem] mb-4 bg-slate-700">
                     <div className="h-full container px-2 mx-auto flex justify-center flex-col lg:max-w-3xl">
-                        <h1 className="text-2xl font-bold py-4 text-brand-pink">{postData.title}</h1>
+                        <h1 className={`text-2xl font-firacode font-bold py-4 text-brand-pink`}>{postData.title}</h1>
                         <div>
                             <small>
                                 Published by Abhinav /
                                 Last updated: <Date dateString={postData.modified} />
                             </small>
                         </div>
-                        <p className="py-1 my-3 pl-3 italic border-l-4 border-l-brand-ultramarine">{postData.excerpt}</p>
+                        <p className="py-1 my-3 pl-3 font-crimsonpro text-xl border-l-4 border-l-brand-ultramarine">{postData.excerpt}</p>
                     </div>
                 </div>
                 

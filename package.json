@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "babel-plugin-prismjs": "^2.1.0",
     "date-fns": "^2.29.3",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
