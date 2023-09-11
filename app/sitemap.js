@@ -6,7 +6,7 @@ export default async function sitemap() {
         headers: {
             Accept: "application/xml",
         },
-    });
+    }, { next: { revalidate: 900 }});
 
 
     const xmlText = await sitemapData.text();
