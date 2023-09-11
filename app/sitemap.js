@@ -1,5 +1,7 @@
 import { parse } from 'node-html-parser';
 
+export const dynamic = 'force-dynamic';
+
 export default async function sitemap() {
 
     const sitemapData = await fetch("https://wp.codingreflections.com/post-sitemap.xml", {
