@@ -37,9 +37,8 @@ export async function GET(request) {
         const urlReplaced = locIn.replace("https://wp.codingreflections.com", "https://codingreflections.com/blog");
         const loc = urlReplaced.slice(0, -1);
         const lastmod = urlElement.querySelector("lastmod").textContent;
-        const lastModified = new Date(lastmod);
 
-        return { loc, lastModified };
+        return { loc, lastmod };
     });
 
     console.log(urls);
@@ -49,7 +48,7 @@ export async function GET(request) {
   ${urls.map((url) => `
     <url>
       <loc>${url.loc}</loc>
-      <lastmod>${url.lastModified}</lastmod>
+      <lastmod>${url.lastmod}</lastmod>
     </url>
   `).join('')}
 </urlset>`;
