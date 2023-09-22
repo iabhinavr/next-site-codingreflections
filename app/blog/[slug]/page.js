@@ -3,6 +3,8 @@ import Date from "../../components/date";
 import PostContent from "../../components/PostContent";
 import { notFound } from "next/navigation";
 
+export const revalidate = 86400;
+
 export async function generateMetadata({params}) {
     const postData = await getSinglePostData(params.slug);
 
@@ -14,8 +16,6 @@ export async function generateMetadata({params}) {
         description: postData.excerpt,
     }
 }
-
-export const revalidate = 86400;
 
 export default async function Post({ params }) {
 

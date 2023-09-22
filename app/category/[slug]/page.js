@@ -1,6 +1,8 @@
 import { getAllCategorySlugs, getCategoryDetails, getCategoryPosts } from "../../lib/taxonomies";
 import PostList from "./PostList";
 
+export const revalidate = 86400;
+
 export async function generateStaticParams() {
     // Return a list of possible values for slug
     const paths = await getAllCategorySlugs();
@@ -14,8 +16,6 @@ export async function generateMetadata({ params }) {
         description: 'Blog posts filed under the category: ' + categoryDetails.slug,
     }
 }
-
-export const revalidate = 86400;
 
 export default async function CategoryArchive({ params }) {
 

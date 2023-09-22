@@ -1,6 +1,8 @@
 import { getAllTagSlugs, getTagInfo, getTagPosts } from "../../lib/taxonomies";
 import PostList from "./PostList";
 
+export const revalidate = 86400;
+
 export async function generateStaticParams() {
     // Return a list of possible values for slug
     const paths = await getAllTagSlugs();
@@ -15,8 +17,6 @@ export async function generateMetadata({ params }) {
         description: 'Blog posts tagged: ' + tagDetails.slug,
     }
 }
-
-export const revalidate = 86400;
 
 export default async function TagArchive({ params }) {
 

@@ -15,6 +15,12 @@ export async function GET (request) {
     else if(request.nextUrl.searchParams.get('type') === 'home') {
         path = '/blog';
     }
+    else if(request.nextUrl.searchParams.get('type') === 'sitemap') {
+        path = '/sitemap.xml';
+    }
+    else if(request.nextUrl.searchParams.get('type') === 'postsitemap') {
+        path = '/post-sitemap';
+    }
 
     if (request.nextUrl.searchParams.get('secret') !== process.env.REVALIDATION_SECRET) {
         return NextResponse.json({ message: 'Invalid token' });

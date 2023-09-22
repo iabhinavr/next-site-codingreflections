@@ -1,35 +1,29 @@
+import { NextResponse } from 'next/server'
 import { parse } from 'node-html-parser';
-import { URL } from 'url';
+
+export const dynamic = 'force-dynamic';
 
 async function getSitemapData() {
-    const timestamp = new Date().getTime();
+
     const baseUrl = "https://wp.codingreflections.com/post-sitemap.xml";
 
-    const urlObj = new URL(baseUrl);
-    urlObj.searchParams.set("timestamp", timestamp);
-
-    const fetchUrl = urlObj.toString();
-
-    console.log(fetchUrl);
-
     const sitemapData = await fetch(
-        fetchUrl, 
+        baseUrl,
         {
             headers: {
                 Accept: "application/xml",
-            },
-            cache: 'no-store'
+            }
         },
     );
 
-    if(!sitemapData.ok) {
+    if (!sitemapData.ok) {
         throw new Error('Failed to fetch sitemap data.');
     }
 
     return sitemapData;
 }
 
-export default async function sitemap() {
+export async function GET(request) {
 
     const sitemapData = await getSitemapData();
 
@@ -45,8 +39,24 @@ export default async function sitemap() {
         const lastmod = urlElement.querySelector("lastmod").textContent;
         const lastModified = new Date(lastmod);
 
-        return { url: loc, lastModified };
+        return { loc, lastModified };
     });
 
-    return urls;
+    console.log(urls);
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${urls.map((url) => `
+    <url>
+      <loc>${url.loc}</loc>
+      <lastmod>${url.lastModified}</lastmod>
+    </url>
+  `).join('')}
+</urlset>`;
+
+    return new NextResponse(xml, {
+        headers: {
+            'Content-Type': 'text/xml'
+        }
+    })
 }
