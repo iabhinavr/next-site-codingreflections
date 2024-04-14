@@ -15,8 +15,7 @@ export default async function Blog() {
     return (
         <>
         <PostList  initialPosts={initialPosts} />
-        </>
-        
+        </>       
     )
 
     
