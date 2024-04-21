@@ -13,9 +13,6 @@ export default function SiteHeader(props) {
                 <nav>
                     <ul className="flex h-full [&>li>a]:flex [&>li>a]:h-full [&>li>a]:px-2 [&>li>a]:items-center [&>li>a:hover]:-translate-y-0.5 [&>li>a:hover]:text-brand-pink [&>li>a]:transition">
                         <li>
-                            <Link href="/blog/">Blog</Link>
-                        </li>
-                        <li>
                             <Link href="/about/">About</Link>
                         </li>
                     </ul>

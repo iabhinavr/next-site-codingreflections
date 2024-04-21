@@ -19,7 +19,7 @@ export default function Home() {
                             <p className="text-slate-100">A space to reflect what I learn about web development - PHP, Javascript, WordPress, and more...</p>
                         </div>
                         <div className="flex flex-row z-20 justify-between items-center w-full">
-                            <Link className="block font-bold md:text-xl py-2 px-4 border-2 border-brand-pink hover:bg-brand-pink transition" href="/blog">Read Blog ⟶</Link>
+                            <Link className="block font-bold md:text-xl py-2 px-4 border-2 border-brand-pink hover:bg-brand-pink transition" href="#">view projects ⟶</Link>
                             <ul className="[&>li>a>svg]:fill-slate-200 [&>li>a>svg]:w-full [&>li>a]:w-6 flex h-full [&>li>a]:flex [&>li>a]:h-full [&>li>a]:mx-2 [&>li>a]:items-center [&>li>a:hover]:-translate-y-0.5 [&>li>a:hover]:text-brand-pink [&>li>a>svg]:transition [&>li>a:hover>svg]:fill-brand-ultramarine">
                                 <li>
                                     <a href="https://www.youtube.com/channel/UCCvxEsK8L4e_JAVXionkyqw">
@@ -40,61 +40,6 @@ export default function Home() {
                             </ul>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section id="home-featured-posts" className="bg-slate-800 px-2">
-                <div className="container mx-auto lg:max-w-6xl">
-                    <h2 className="text-2xl py-4">Featured Posts</h2>
-                    <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>li>a>h3]:text-lg [&>li>a>h3]:text-brand-violet [&>li>a>h3]:font-bold [&>li>a:hover>h3]:text-brand-pink">
-                        <li>
-                            <Link href="/blog/php-development-environment-docker">
-                                <Image className="rounded-t-xl" width="720" height="480" src="https://wp.codingreflections.com/wp-content/uploads/2022/06/php-env-docker-yt-ft-1.png" alt="How to Setup PHP Development Environment using Docker" />
-                            </Link>
-                            <Link href="/blog/php-development-environment-docker">
-                                <h3>How to Setup PHP Development Environment using Docker</h3>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/blog/nginx-reverse-proxy-nodejs">
-                                <Image className="rounded-t-xl" width="720" height="480" src="https://wp.codingreflections.com/wp-content/uploads/2022/06/node-js-nginx-yt-ft-1.png" alt="How to Setup Nginx Reverse Proxy for Node.js" />
-                            </Link>
-                            <Link href="/blog/nginx-reverse-proxy-nodejs">
-                                <h3>How to Setup Nginx Reverse Proxy for Node.js</h3>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/blog/what-are-websockets">
-                                <Image className="rounded-t-xl" width="720" height="480" src="https://wp.codingreflections.com/wp-content/uploads/2022/09/what-is-websocket-yt-ft-1.png" alt="What is Websocket? How is it different from HTTP?" />
-                            </Link>
-                            <Link href="/blog/what-are-websockets">
-                                <h3>What is Websocket? How is it different from HTTP?</h3>
-                            </Link>
-                        </li>
-                    </ul>
-                    <div className="flex justify-end">
-                        <Link className="inline-block max-w-xs text-md pt-3 pb-2 px-4 border-2 border-brand-pink hover:bg-brand-pink transition my-4" href="/blog">View all Posts ⟶</Link>
-                    </div>
-                    
-                </div>
-            </section>
-            <section id="home-featured-videos" className="px-2">
-                <div className="container mx-auto lg:max-w-6xl">
-                    <h2 className="text-2xl py-4">Popular Videos</h2>
-                    <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <li>
-                            <VideoCard href="https://www.youtube.com/watch?v=ZIsdbVOQJNc" src="https://wp.codingreflections.com/wp-content/uploads/2022/06/php-curl-json-api-yt-ft-1.jpg" title="Sending JSON API Requests using PHP cURL" />
-                        </li>
-                        <li>
-                            <VideoCard href="https://www.youtube.com/watch?v=6YwoFeNXFKk" src="https://wp.codingreflections.com/wp-content/uploads/2022/06/hugo-blog-yt-ft-1.jpg" title="Hugo Crash Course" />
-                        </li>
-                        <li>
-                            <VideoCard href="https://www.youtube.com/watch?v=b0CQn4IRgsg" src="https://wp.codingreflections.com/wp-content/uploads/2022/09/php-sockets-chat-application-part-2-yt-ft-1.png" title="Build a chat app using PHP Sockets" />
-                        </li>
-                    </ul>
-                    <div className="flex justify-end">
-                        <a className="inline-block max-w-xs text-md pt-3 pb-2 px-4 border-2 border-red-500 hover:bg-red-500 transition my-4" href="https://www.youtube.com/@CodingReflections/videos">Watch All Videos on YouTube ⟶</a>
-                    </div>
-                    
                 </div>
             </section>
             <SiteFooter />
